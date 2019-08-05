@@ -14,4 +14,62 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PortAudioAudioManager.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PortAudioAudioManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\BlockingStream.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\CallbackInterface.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\CallbackStream.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\CFunCallbackStream.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\CppFunCallbackStream.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\Device.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\DirectionSpecificStreamParameters.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\Exception.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\HostApi.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\InterfaceCallbackStream.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\MemFunCallbackStream.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\Stream.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\StreamParameters.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\System.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\SystemDeviceIterator.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\SystemHostApiIterator.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>

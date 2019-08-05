@@ -18,12 +18,12 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -91,6 +91,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="PortAudioAudioManager.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\BlockingStream.cxx" />
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\CallbackInterface.cxx" />
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\CallbackStream.cxx" />
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\CFunCallbackStream.cxx" />
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\CppFunCallbackStream.cxx" />
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\Device.cxx" />
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\DirectionSpecificStreamParameters.cxx" />
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\Exception.cxx" />
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\HostApi.cxx" />
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\InterfaceCallbackStream.cxx" />
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\MemFunCallbackStream.cxx" />
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\Stream.cxx" />
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\StreamParameters.cxx" />
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\System.cxx" />
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\SystemDeviceIterator.cxx" />
+    <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\SystemHostApiIterator.cxx" />
+    <ClCompile Include="PortAudioAudioManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Usagi\Usagi\Usagi.vcxproj">
+      <Project>{4250e1c0-ea0b-4575-bc04-11e7f83c2ed4}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
