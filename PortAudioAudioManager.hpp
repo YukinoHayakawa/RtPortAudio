@@ -4,7 +4,7 @@
 
 #include <Usagi/Runtime/Audio/AudioManager.hpp>
 
-namespace usagi::extensions
+namespace usagi
 {
 class PortAudioPreInit : public AudioManager
 {
@@ -18,13 +18,20 @@ public:
 class PortAudioAudioManager : public PortAudioPreInit
 {
     portaudio::AutoSystem mSystemInit;
-    portaudio::System &mPaSystem = portaudio::System::instance();
 
-    static void printSupportedStandardSampleRates(
+    static portaudio::System & system();
+
+    static void enumerateSupportedFormats(
         const portaudio::DirectionSpecificStreamParameters &input_parameters,
         const portaudio::DirectionSpecificStreamParameters &output_parameters);
 
+    AcquisitionAgent createDeviceAgent(portaudio::Device &device);
+
 public:
+    PortAudioAudioManager();
+
     const std::vector<AcquisitionAgent> & enumerateDevices() override;
+    AcquisitionAgent defaultOutputDevice() override;
+    std::shared_ptr<AudioDevice> createDevice(int index) override;
 };
 }

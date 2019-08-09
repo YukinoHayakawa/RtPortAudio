@@ -12,8 +12,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{de89b626-7b40-429c-a89f-7b34f2c2795a}</ProjectGuid>
-    <RootNamespace>UsagiExtPortAudio</RootNamespace>
+    <ProjectGuid>{4dc05a4c-7bb0-4346-a1f4-c9e1bca86800}</ProjectGuid>
+    <RootNamespace>RtPortAudio</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -91,9 +91,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="PortAudioAudioManager.hpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\BlockingStream.cxx" />
     <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\CallbackInterface.cxx" />
     <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\CallbackStream.cxx" />
@@ -110,12 +107,16 @@
     <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\System.cxx" />
     <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\SystemDeviceIterator.cxx" />
     <ClCompile Include="..\..\..\..\..\Thirdparties\Submodules\portaudio\bindings\cpp\source\portaudiocpp\SystemHostApiIterator.cxx" />
+    <ClCompile Include="PortAudioAudioDevice.cpp" />
     <ClCompile Include="PortAudioAudioManager.cpp" />
+    <ClCompile Include="PortAudioAudioOutputStream.cpp" />
+    <ClCompile Include="PortAudioCommon.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Usagi\Usagi\Usagi.vcxproj">
-      <Project>{4250e1c0-ea0b-4575-bc04-11e7f83c2ed4}</Project>
-    </ProjectReference>
+    <ClInclude Include="PortAudioAudioDevice.hpp" />
+    <ClInclude Include="PortAudioAudioManager.hpp" />
+    <ClInclude Include="PortAudioAudioOutputStream.hpp" />
+    <ClInclude Include="PortAudioCommon.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
