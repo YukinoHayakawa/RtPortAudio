@@ -14,6 +14,7 @@ portaudio::StreamParameters PortAudioAudioDevice::buildOutputStreamParameters(
 
     pa_output_format.setDevice(mDevice);
     pa_output_format.setSuggestedLatency(mDevice.defaultLowOutputLatency());
+    pa_output_format.setHostApiSpecificStreamInfo(nullptr);
 
     return {
         portaudio::DirectionSpecificStreamParameters::null(),
