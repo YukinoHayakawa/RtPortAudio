@@ -9,7 +9,10 @@ int PortAudioAudioOutputStream::callback(
     const PaStreamCallbackTimeInfo *time_info,
     PaStreamCallbackFlags status_flags)
 {
-    return static_cast<int>(mCallback(output_buffer, frames_per_buffer));
+    return static_cast<int>(mCallback(
+        static_cast<std::uint8_t*>(output_buffer),
+        frames_per_buffer
+    ));
 }
 
 PortAudioAudioOutputStream::PortAudioAudioOutputStream(

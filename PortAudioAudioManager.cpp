@@ -210,7 +210,7 @@ AudioManager::AcquisitionAgent PortAudioAudioManager::defaultOutputDevice()
     return createDeviceAgent(system().defaultOutputDevice());
 }
 
-std::shared_ptr<AudioDevice> PortAudioAudioManager::createDevice(int index)
+std::shared_ptr<AudioDevice> PortAudioAudioManager::acquireDevice(int index)
 {
     return std::make_shared<PortAudioAudioDevice>(index);
 }

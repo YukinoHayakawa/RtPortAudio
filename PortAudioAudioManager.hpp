@@ -32,6 +32,7 @@ public:
 
     const std::vector<AcquisitionAgent> & enumerateDevices() override;
     AcquisitionAgent defaultOutputDevice() override;
-    std::shared_ptr<AudioDevice> createDevice(int index) override;
+    // todo: fix recreating the same devices
+    std::shared_ptr<AudioDevice> acquireDevice(int index) override;
 };
 }
