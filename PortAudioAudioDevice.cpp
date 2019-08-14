@@ -19,7 +19,7 @@ portaudio::StreamParameters PortAudioAudioDevice::buildOutputStreamParameters(
     return {
         portaudio::DirectionSpecificStreamParameters::null(),
         pa_output_format,
-        format.sample_rate,
+        static_cast<double>(format.sample_rate),
         paFramesPerBufferUnspecified,
         paClipOff
     };

@@ -9,8 +9,11 @@ int PortAudioAudioOutputStream::callback(
     const PaStreamCallbackTimeInfo *time_info,
     PaStreamCallbackFlags status_flags)
 {
+    ArrayView<std::byte*> channels {
+        static_cast<std::byte**>(output_buffer), mFormat.num_channels
+    };
     return static_cast<int>(mCallback(
-        static_cast<std::uint8_t*>(output_buffer),
+        channels,
         frames_per_buffer
     ));
 }
